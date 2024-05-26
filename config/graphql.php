@@ -75,14 +75,18 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                'tasks' => App\GraphQL\Queries\TasksQuery::class,
             ],
             'mutation' => [
-                // ExampleMutation::class,
+                'createTask' => App\GraphQL\Mutations\CreateTaskMutation::class,
+                'updateTask' => App\GraphQL\Mutations\UpdateTaskMutation::class,
+                'deleteTask' => App\GraphQL\Mutations\DeleteTaskMutation::class,
+                'login' => App\GraphQL\Mutations\LoginMutation::class,
+                'logout' => App\GraphQL\Mutations\LogoutMutation::class,
             ],
             // The types only available in this schema
             'types' => [
-                // ExampleType::class,
+                'Task' => App\GraphQL\Types\TaskType::class,
             ],
 
             // Laravel HTTP middleware
