@@ -2,9 +2,8 @@
 
 Run the following command inside the project directory:
 
-composer install
-
 ```bash
+composer install
 php artisan migrate
 php artisan db:seed
 ```
